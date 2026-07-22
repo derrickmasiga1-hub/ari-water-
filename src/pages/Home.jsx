@@ -4,6 +4,7 @@ import ProductGrid from "../components/ProductGrid";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+import DeliveryCoverage from "../components/DeliveryCoverage";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <ProductGrid />
       <WhyChooseUs />
+      <DeliveryCoverage />
       <Footer />
       <WhatsAppButton />
     </>
