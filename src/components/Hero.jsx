@@ -1,58 +1,57 @@
+import Button from "./Button";
+
 export default function Hero() {
   return (
-    <section
-      style={{
-        padding: "120px 20px",
-        textAlign: "center",
-        background:
-          "linear-gradient(135deg,#CAF0F8,#90E0EF,#48CAE4)",
-      }}
-    >
-      <h1
-        style={{
-          fontSize: "60px",
-          marginBottom: "20px",
-        }}
-      >
-        Pure Water.
-        <br />
-        Delivered with Care.
-      </h1>
+    <section className="bg-gradient-to-r from-cyan-100 via-sky-100 to-blue-200 py-24">
 
-      <p
-        style={{
-          fontSize: "22px",
-          color: "#374151",
-        }}
-      >
-        Safe drinking water delivered to homes,
-        businesses and events across Kenya.
-      </p>
+      <div className="max-w-7xl mx-auto px-8">
 
-      <button
-        style={{
-          marginTop: "40px",
-          marginRight: "15px",
-          padding: "15px 35px",
-          borderRadius: "10px",
-          border: "none",
-          background: "#0077B6",
-          color: "white",
-          cursor: "pointer",
-        }}
-      >
-        Order Water
-      </button>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-      <button
-        style={{
-          padding: "15px 35px",
-          borderRadius: "10px",
-          cursor: "pointer",
-        }}
-      >
-        Request Quote
-      </button>
+          <div>
+
+            <p className="text-sky-600 font-semibold uppercase tracking-widest">
+              Welcome to Ari Water
+            </p>
+
+            <h1 className="text-6xl font-extrabold text-gray-800 leading-tight mt-4">
+              Pure Water.
+              <br />
+              Delivered with Care.
+            </h1>
+
+            <p className="text-xl text-gray-600 mt-8">
+              Premium purified drinking water for
+              homes, offices, schools, institutions,
+              events and businesses across Kenya.
+            </p>
+
+            <div className="flex gap-4 mt-10">
+
+              <Button>
+                Order Water
+              </Button>
+
+              <Button variant="secondary">
+                Request Quote
+              </Button>
+
+            </div>
+
+          </div>
+
+          <div className="flex justify-center">
+
+            <div className="text-[220px] animate-bounce">
+              💧
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
   );
 }

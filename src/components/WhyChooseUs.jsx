@@ -1,19 +1,55 @@
+import FeatureCard from "./FeatureCard";
+
+const features = [
+  {
+    icon: "💧",
+    title: "Advanced Purification",
+    description:
+      "Multi-stage filtration for clean and safe drinking water.",
+  },
+  {
+    icon: "🚚",
+    title: "Fast Delivery",
+    description:
+      "Reliable delivery to homes, offices and events.",
+  },
+  {
+    icon: "🏢",
+    title: "Corporate Supply",
+    description:
+      "Water solutions for businesses and institutions.",
+  },
+  {
+    icon: "🎉",
+    title: "Custom Branding",
+    description:
+      "Personalized bottled water for events and promotions.",
+  },
+];
+
 export default function WhyChooseUs() {
   return (
-    <section style={{ padding: "60px", textAlign: "center" }}>
-      <h2>Why Choose Ari Water?</h2>
+    <section className="bg-slate-50 py-20">
 
-      <ul
-        style={{
-          listStyle: "none",
-          padding: 0,
-        }}
-      >
-        <li>✔ Purified Drinking Water</li>
-        <li>✔ Fast Delivery</li>
-        <li>✔ Affordable Prices</li>
-        <li>✔ Custom Event Branding</li>
-      </ul>
+      <div className="max-w-7xl mx-auto px-6">
+
+        <h2 className="text-4xl font-bold text-center text-sky-700 mb-12">
+          Why Choose Ari Water
+        </h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {features.map((feature) => (
+            <FeatureCard
+              key={feature.title}
+              {...feature}
+            />
+          ))}
+
+        </div>
+
+      </div>
+
     </section>
   );
 }
