@@ -1,36 +1,42 @@
-function Navbar() {
+import { Link } from "react-router-dom";
+
+export default function Navbar() {
   return (
     <nav
       style={{
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "20px 40px",
-        background: "#0077B6",
-        color: "white",
+        padding: "20px 60px",
+        background: "#ffffff",
+        borderBottom: "1px solid #E5E7EB",
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
       }}
     >
-      <h2>Ari Water</h2>
+      <h2 style={{ color: "#0077B6" }}>
+        💧 Ari Water
+      </h2>
 
-      <div style={{ display: "flex", gap: "20px" }}>
-        <a href="#" style={{ color: "white", textDecoration: "none" }}>
-          Home
-        </a>
+      <div
+        style={{
+          display: "flex",
+          gap: "25px",
+        }}
+      >
+        <Link to="/">Home</Link>
 
-        <a href="#" style={{ color: "white", textDecoration: "none" }}>
-          Products
-        </a>
+        <Link to="/about">About</Link>
 
-        <a href="#" style={{ color: "white", textDecoration: "none" }}>
-          Order
-        </a>
+        <Link to="/products">Products</Link>
 
-        <a href="#" style={{ color: "white", textDecoration: "none" }}>
-          Contact
-        </a>
+        <Link to="/order">Order</Link>
+
+        <Link to="/contact">Contact</Link>
+
+        <Link to="/login">Login</Link>
       </div>
     </nav>
   );
 }
-
-export default Navbar;
